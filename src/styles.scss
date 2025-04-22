@@ -1,1 +1,206 @@
 /* You can add global styles to this file, and also import other style files */
+@import "bootstrap";
+@import "./css/mixins.scss";
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+html, body {
+    font-family: "Exo", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+p{
+    margin-bottom: 5px;
+}
+.builder__text{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 24px;
+    margin-left: 10px;
+}
+.section__subtitle_centered{
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: red;
+    position: relative;
+}
+.section__subtitle_centered .left-separetor,
+.section__subtitle_centered .right-separetor {
+  /* left: calc(100% + 10px); */
+  width: 40px;
+  height: 2px;
+  content: "";
+  top: calc(50% - 1px);
+  background: red;
+  margin-right: 15px;
+}
+.section__subtitle .left-separetor,
+.section__subtitle .right-separetor {
+  /* left: calc(100% + 10px); */
+  width: 40px;
+  height: 2px;
+  content: "";
+  top: calc(50% - 1px);
+  background: red;
+  margin-right: 15px;
+}
+
+.section__subtitle {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: red;
+    position: relative;
+  }
+.connect__btn{
+    background-color: red;
+    color: #ffffff;
+    padding: 8px 18px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+.item-container {
+    background: gray;
+    border: 2px solid transparent;
+    border-radius: 24px;
+    display: block;
+    text-decoration: none;
+    height: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 12px 24px;
+}
+.ser__card{
+padding: 20px;
+border-radius: 5px;
+background-color: #f6f7f8;
+position: relative;
+}
+.ser__card-heading{
+    font-weight: 600;
+    font-size: 18px;
+}
+.ser__card-description{
+    font-size: 16px;
+}
+
+.mt-icon-box-wraper {
+    position: relative;
+}
+.icon-count-2 {
+    position: relative;
+    margin-bottom: 10px;
+    transition: all 0.5s linear;
+    padding: 50px 30px;
+}
+.bg-gray {
+    background-color: #f6f7f8;
+}
+.icon-count-2 span.icon-count-number {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 120px;
+    font-weight: 800;
+    color: rgba(177, 177, 177, 0.7);
+    opacity: 0.3;
+    line-height: 120px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.5s linear;
+}
+.icon-count-2:after {
+    position: absolute;
+    content: '';
+    left: 10px;
+    right: 10px;
+    top: -10px;
+    height: 10px;
+    background-color: rgba(177, 177, 177, 0.7)  ;
+    transition: all 0.5s linear;
+}
+.icon-md.inline-icon {
+    width: auto;
+}
+.icon-md img {
+    height: 60px;
+}
+.icon-count-2:hover {
+    background-color: #fff;
+    // box-shadow: 0 10px 30px 0 rgba(50, 50, 50, .16);
+}
+.mt-icon-box-wraper:hover .scale-in-center {
+    animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+// .icon-count-2:hover:after {
+//     top: 0px;
+//     left: 0px;
+//     right: 0px;
+// }
+.icon-count-2:hover span.icon-count-number {
+    // color: #f5be23;
+    color: red;
+    opacity: 1;
+}
+.icon-content{
+    margin-top: 30px;
+}
+.section-content{
+    margin-top: 30px;
+}
+.our-skill-more__media-img.img1 {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 410px;
+    height: 444px;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.our-skill-more__media-img.img1 img {
+    overflow: hidden;
+    border-radius: 6px;
+    width: 378px;
+    height: 410px;
+}
+.our-skill-more__media-img.img2 {
+    width: 310px;
+    height: 310px;
+    overflow: hidden;
+    margin-top: -207px;
+    position: relative;
+    border-radius: 500px;
+    border: 6px solid var(--rr-common-white);
+    margin-right: 210px;
+}
+
+.about-us__list {
+    gap: 10px;
+    list-style: none;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  
+}

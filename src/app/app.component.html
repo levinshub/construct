@@ -8,42 +8,508 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <style>
-  :host {
-    --bright-blue: oklch(51.01% 0.274 263.83);
-    --electric-violet: oklch(53.18% 0.28 296.97);
-    --french-violet: oklch(47.66% 0.246 305.88);
-    --vivid-pink: oklch(69.02% 0.277 332.77);
-    --hot-red: oklch(61.42% 0.238 15.34);
-    --orange-red: oklch(63.32% 0.24 31.68);
-
-    --gray-900: oklch(19.37% 0.006 300.98);
-    --gray-700: oklch(36.98% 0.014 302.71);
-    --gray-400: oklch(70.9% 0.015 304.04);
-
-    --red-to-pink-to-purple-vertical-gradient: linear-gradient(
-      180deg,
-      var(--orange-red) 0%,
-      var(--vivid-pink) 50%,
-      var(--electric-violet) 100%
-    );
-
-    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
-      90deg,
-      var(--orange-red) 0%,
-      var(--vivid-pink) 50%,
-      var(--electric-violet) 100%
-    );
-
-    --pill-accent: var(--bright-blue);
-
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  .about-us-2__media {
+    position: relative;
+    margin-right: 80px;
   }
-  </style>
+
+  .about-us-2__star-shape {
+    left: -330px;
+    top: -23px;
+    position: absolute;
+  }
+
+  .about-us-2__left-shape {
+    position: absolute;
+    bottom: 0;
+    left: -70px;
+    z-index: -1;
+  }
+
+  .about-us-2__right-shape {
+    position: absolute;
+    bottom: -75px;
+    right: 0;
+    z-index: -1;
+  }
+
+  .about-us-2__bottom-shape {
+    right: 0;
+    z-index: -1;
+    bottom: 133px;
+    position: absolute;
+  }
+
+  .rr-upDown {
+    -webkit-animation: upDown 1.3S infinite alternate;
+    animation: upDown 1.3S infinite alternate;
+  }
+
+  .about-us-2__thumb-1 {
+    margin-top: 57px;
+  }
+
+  .about-us-2__thumb-2 {
+    position: absolute;
+    top: -50px;
+    right: 0;
+  }
+
+  .about-us-2__customer {
+    background-color: var(--rr-heading-primary);
+    background: #15181B;
+    border: 8px solid #FFFFFF;
+    border-radius: 3px;
+    height: 120px;
+    width: 270px;
+    padding: 15px 24px 12px;
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+  }
+
+  .about-us-2__customer-shape {
+    position: absolute;
+    bottom: -8px;
+    right: -25px;
+  }
+
+  .section-space {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .about-us-2__customer h3 {
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .about-us-2__customer h6 {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 600;
+  }
+
+  .clip-t-b {
+    z-index: 10;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    -webkit-animation: clip-t-b 1s;
+    animation: clip-t-b 1s;
+    -webkit-animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  }
+
+  .about-us-2__content {
+    position: relative;
+  }
+
+  .about-us-2__big-shape {
+    right: 0px;
+    position: absolute;
+  }
+
+  .section__title-wrapper {
+    position: relative;
+    z-index: 55;
+  }
+
+  .section__title {
+    margin-top: 15px;
+  }
+
+  .section__subtitle.mb-13 {
+    margin-bottom: 13px;
+  }
+
+  .section__subtitle .left-separetor {
+    left: inherit;
+    right: calc(100% + 10px);
+  }
+
+  .section__subtitle {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: red;
+    position: relative;
+  }
 
 
+
+  .about-us-2__award {
+    margin-bottom: 35px;
+    max-width: 521px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .about-us-2__award__item {
+    gap: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    padding: 15px 20px;
+    background: #f6f7f8;
+    border-radius: 3px;
+    /* -webkit-box-shadow: 0px 10px 20px rgba(21, 24, 27, 0.1); */
+    /* box-shadow: 0px 10px 20px rgba(21, 24, 27, 0.1); */
+  }
+
+  .about-us__shape-2 {
+    width: 644px;
+    height: 644px;
+    left: 61px;
+    bottom: -104px;
+    border-radius: 500px;
+    background: rgba(255, 54, 54, 0.1);
+    /* -webkit-filter: blur(50px);
+    filter: blur(50px); */
+  }
+
+  .item-contents {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    height: 100%;
+  }
+
+  .what-we-do-2__item-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    height: 100%;
+    border-radius: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
+  /* .what-we-do-2__item-bg {
+    background-image: url(assets/big_shape.png);
+  } */
+</style>
+<app-header></app-header>
+<section id="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="section__title-wrapper">
+          <span class="section__subtitle"><span class="left-separetor"></span>Our services</span>
+          <h2 class="section__title">Professional And Expert Roofing Contractor.</h2>
+          <p class="">We ensure peace of mind, trust, and transparent house construction services.
+          </p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-6 mt-10">
+          <div class="ser__card">
+            <!-- <div data-background="assets/3.jpg" class="what-we-do-2__item-bg">
+            </div> -->
+            <p class="ser__card-heading">Roofing Contractor</p>
+            <p class="ser__card-description">We ensure peace of mind, trust, and transparent house construction
+              services.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-10">
+          <div class="ser__card">
+            <!-- <div data-background="assets/3.jpg" class="what-we-do-2__item-bg">
+            </div> -->
+            <p class="ser__card-heading">Roofing Contractor</p>
+            <p class="ser__card-description">We ensure peace of mind, trust, and transparent house construction
+              services.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-10">
+          <div class="ser__card">
+            <!-- <div data-background="assets/3.jpg" class="what-we-do-2__item-bg">
+            </div> -->
+            <p class="ser__card-heading">Roofing Contractor</p>
+            <p class="ser__card-description">We ensure peace of mind, trust, and transparent house construction
+              services.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-10">
+          <div class="ser__card">
+            <!-- <div data-background="assets/3.jpg" class="what-we-do-2__item-bg">
+            </div> -->
+            <p class="ser__card-heading">Roofing Contractor</p>
+            <p class="ser__card-description">We ensure peace of mind, trust, and transparent house construction
+              services.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="about-us" class="about-us-2 section-space overflow-hidden">
+  <div class="container">
+    <div class="row flex-column-reverse flex-xl-row">
+      <div class="col-xl-6">
+        <div class="about-us-2__media">
+
+          <div class="about-us-2__star-shape  rr-downUp">
+            <img src="/assets/6.png" alt="image not found">
+          </div>
+
+          <div class="about-us-2__left-shape rr-downUp">
+            <img src="/assets/5.png" alt="image not found">
+          </div>
+          <div class="about-us-2__right-shape rr-downUp">
+            <img src="/assets/4.png" alt="image not found">
+          </div>
+          <div class="about-us-2__bottom-shape rr-upDown">
+            <img src="/assets/3.png" alt="image not found">
+          </div>
+
+          <div class="about-us-2__thumb-1 wow clip-t-b br-20" style="visibility: visible;animation-name: clip-t-b;">
+            <img class="" src="/assets/1.jpg" alt="image not found">
+          </div>
+          <div class="about-us-2__thumb-2 wow clip-t-b " style="visibility: visible; animation-name: clip-t-b;">
+            <img src="/assets/2.jpg" alt="image not found">
+          </div>
+
+          <div class="about-us-2__customer">
+            <div class="about-us-2__customer-shape">
+              <img src="/assets/7.png" alt="image not found">
+            </div>
+            <h3>25+</h3>
+            <h6>Years of Experiences</h6>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div class="about-us-2__content">
+          <!-- 
+          <div class="about-us-2__big-shape rr-upDown">
+            <img src="/assets/big_shape.png" alt="image not found">
+          </div> -->
+
+          <div class="section__title-wrapper">
+            <span class="section__subtitle"><span class="left-separetor"></span>Who we are</span>
+            <h2 class="section__title">Professional And Expert Roofing Contractor.</h2>
+            <p class="mb-40 mb-xs-30">We ensure peace of mind, trust, and transparent house construction services.
+            </p>
+          </div>
+
+          <div class="about-us-2__award">
+            <div class="about-us-2__award__item active">
+              <div class="about-us-2__award-icon">
+                <img src="/assets/award-1.png" alt="image not found">
+              </div>
+              <div class="about-us-2__award-text">
+                <h6>Certified &amp; Awards winner"</h6>
+              </div>
+            </div>
+            <div class="about-us-2__award__item active">
+              <div class="about-us-2__award-icon">
+                <img src="/assets/award-2.png" alt="image not found">
+              </div>
+              <div class="about-us-2__award-text">
+                <h6>Best Quality
+                  Services"</h6>
+              </div>
+            </div>
+          </div>
+
+          <p class="description">Sponsoring and manaing work visas parts becoming results for fullfill your dream wishes
+          </p>
+
+          <div class="about-us-2__btn-box mt-30">
+            <a class="connect__btn">
+              Let's contruct
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why-bd" class="about-us-2 section-space overflow-hidden">
+  <div class="container">
+    <div class="row flex-column-reverse flex-xl-row">
+      <div class="col-xl-12">
+        <div class="section__title-wrapper">
+          <p class="section__subtitle_centered"><span class="left-separetor"></span>Why <span class="builder__text">Dhyanalingaa Builders</span></p>
+          <p class="section__title">We ensure peace of mind, trust, and transparent house construction services.
+          </p>
+        
+        </div>
+      </div>
+      <div class="col-xl-12">
+        <div class="section-content">
+          <div class="services-half-bottom">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-3 col-md-6">    
+                          <div class="mt-icon-box-wraper m-b30">
+                              <div class="relative icon-count-2 bg-gray p-a30 p-tb50">
+                                  <span class="icon-count-number">1</span>
+                                  <div class="icon-md inline-icon m-b15 site-text-primary scale-in-center">
+                                      <span class="icon-cell"><img src="assets/11.png" alt=""></span>
+                                  </div>
+                                  <div class="icon-content">
+                                      <h4 class="mt-tilte m-b25">Building <br>Construction</h4>
+                                      <p>lorem Ipsum available, but the majority have suffered alterati on in some form, by ious by accident.</p>
+                                  </div>
+                              </div>
+                          </div>                            	
+                          
+                      </div>
+                      
+                      <div class="col-lg-3 col-md-6">
+                          
+                          <div class="mt-icon-box-wraper m-b30">
+                              <div class="relative icon-count-2 bg-gray p-a30 p-tb50">
+                                  <span class="icon-count-number">2</span>
+                                  <div class="icon-md inline-icon m-b15 site-text-primary scale-in-center">
+                                      <span class="icon-cell"><img src="assets/12.png" alt=""></span>
+                                  </div>
+                                  <div class="icon-content">
+                                      <h4 class="mt-tilte m-b25">Building <br>Renovation</h4>
+                                      <p>lorem Ipsum available, but the majority have suffered alterati on in some form, by ious by accident.</p>
+                                  </div>
+                              </div>
+                          </div>                            	
+                          
+                      </div>
+
+                      <div class="col-lg-3 col-md-6">
+                          
+                          <div class="mt-icon-box-wraper m-b30">
+                              <div class="relative icon-count-2 bg-gray p-a30 p-tb50">
+                                  <span class="icon-count-number">3</span>
+                                  <div class="icon-md inline-icon m-b15 site-text-primary scale-in-center">
+                                      <span class="icon-cell"><img src="assets/13.png" alt=""></span>
+                                  </div>
+                                  <div class="icon-content">
+                                      <h4 class="mt-tilte m-b25">Building <br>Maintenance</h4>
+                                      <p>lorem Ipsum available, but the majority have suffered alterati on in some form, by ious by accident.</p>
+                                  </div>
+                              </div>
+                          </div>                            	
+                          
+                      </div>
+
+                      <div class="col-lg-3 col-md-6">
+                          
+                          <div class="mt-icon-box-wraper m-b30">
+                              <div class="relative icon-count-2 bg-gray p-a30 p-tb50">
+                                  <span class="icon-count-number">4</span>
+                                  <div class="icon-md inline-icon m-b15 site-text-primary scale-in-center">
+                                      <span class="icon-cell"><img src="assets/14.png" alt=""></span>
+                                  </div>
+                                  <div class="icon-content">
+                                      <h4 class="mt-tilte m-b25">Architecture<br>Design</h4>
+                                      <p>lorem Ipsum available, but the majority have suffered alterati on in some form, by ious by accident.</p>
+                                  </div>
+                              </div>
+                          </div>                            	
+                          
+                      </div>										
+                                                                               
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="about-us" class="about-us-2 section-space overflow-hidden">
+  <div class="container">
+    <div class="row flex-column-reverse flex-xl-row">
+      <div class="col-xl-6">
+        <div class="section__title-wrapper">
+          <span class="section__subtitle"><span class="left-separetor"></span>Who we are</span>
+          <h2 class="section__title">Professional And Expert Roofing Contractor.</h2>
+          <p class="mb-40 mb-xs-30">We ensure peace of mind, trust, and transparent house construction services.
+          </p>
+        </div>
+        <ul class="about-us__list mb-25">
+          <li><span><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.002 1L5.22195 11L1.00195 6.5" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+              Market Research
+          </li>
+          <li class="mt-20"><span><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.002 1L5.22195 11L1.00195 6.5" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+              Industrial manufacturing
+          </li>
+          <li><span><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.002 1L5.22195 11L1.00195 6.5" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+              Pre-construction services
+          </li>
+          <li class="mt-20"><span><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.002 1L5.22195 11L1.00195 6.5" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+              Building and construction
+          </li>
+      </ul>
+      <p class="mb-40">Proactively pontificate client-centered relationships vis-a-vis process centric leadership skills. Credibly maintain focused internal or “organic” sources rather than vertical alignments.</p>
+      </div>
+      <div class="col-xl-6">
+        <div class="our-skill-more__media d-flex align-items-center align-items-xl-end flex-column">
+          <div class="our-skill-more__media-img img1" data-background="assets/15.png" style="background-image: url(&quot;assets/15.png&quot;);"><img src="assets/17.jpg" alt=""></div>
+          <div class="our-skill-more__media-img img2"><img src="assets/16.jpg" alt=""></div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="about-us" class="about-us-2 section-space overflow-hidden">
+  <div class="container">
+    <div class="row flex-column-reverse flex-xl-row">
+      <div class="col-xl-6">
+        <div class="section__title-wrapper">
+          <span class="section__subtitle"><span class="left-separetor"></span>Our projects</span>
+          <h2 class="section__title">Professional And Expert Roofing Contractor.</h2>
+          <p class="mb-40 mb-xs-30">We ensure peace of mind, trust, and transparent house construction services.
+          </p>
+        </div>
+       
+      </div>
+      <div class="col-xl-12">
+        <!-- <owl-carousel-o [options]="customOptions">
+
+          <ng-container *ngFor="let slide of productImages">
+            <ng-template carouselSlide [id]="slide.id">
+              <img [src]="slide.image" [alt]="slide.name" [title]="slide.name">
+            </ng-template>
+          </ng-container>
+      
+        </owl-carousel-o> -->
+      </div>
+    </div>
+  </div>
+</section>
 <router-outlet />
