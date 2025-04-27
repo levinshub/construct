@@ -3,16 +3,20 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./header/header.component";
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { NgFor, NgForOf } from "@angular/common";
+import { NgFor, NgForOf,CommonModule } from "@angular/common";
 import { Router } from '@angular/router';
+import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent,CarouselModule,NgFor],
+  imports: [RouterOutlet, HeaderComponent,CarouselModule,NgFor,CommonModule,NgbAccordionModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  items = ['First', 'Second', 'Third'];
+
   title = 'construct';
   customOptions: OwlOptions = {
     loop: true,
@@ -21,7 +25,34 @@ export class AppComponent {
     pullDrag: false,
     dots: false,
     navSpeed: 100,
-    navText: ['', ''],
+    navText: ['Next', 'Prev'],
+    nav: true,
+    lazyLoad:true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 1
+      },
+      740: {
+        items: 1
+      },
+      940: {
+        items: 1
+      }
+    },
+  }
+  customOptions_projects: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: false,
+    pullDrag: false,
+    dots: true,
+    navSpeed: 1000,
+    navText: ['Next', 'Prev'],
+    nav: false,
+    lazyLoad:true,
     responsive: {
       0: {
         items: 1
@@ -30,31 +61,30 @@ export class AppComponent {
         items: 2
       },
       740: {
-        items: 3
+        items: 2
       },
       940: {
-        items: 4
+        items: 3
       }
     },
-    nav: true
   }
   productImages = [
     {
-      image: "/assets/1.jpg",
+      image: "/assets/17.jpg",
       id: "1",
       name: "Red Chili Powder",
       actualPrice: "100",
       discountPrice: "80",
       discountPercent: "20%"
     }, {
-      image: "/assets/1.jpg",
+      image: "/assets/17.jpg",
       id: "2",
       name: "Sirudhaniya puttu maavu",
       actualPrice: "80",
       discountPrice: "60",
       discountPercent: "25%"
     }, {
-      image: "/assets/1.jpg",
+      image: "/assets/17.jpg",
       id: "3",
       name: "Small Onion Thalippu Vadagam",
       actualPrice: "60",

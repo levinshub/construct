@@ -34,6 +34,9 @@ $unit: 'px'; // Feel free to change the unit.
 @include list-loop('.pl-', 'padding-left');
 @include list-loop('.px-', 'padding');
 
+// Paddings
+@include list-loop('.fs-', 'font-size');
+
 // Center Elements
 @mixin center($position) {
     position: absolute;
