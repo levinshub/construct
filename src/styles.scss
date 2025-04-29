@@ -323,13 +323,14 @@ position: relative;
     justify-content: center;
     gap: 5px;
     color: #ffffff;
+    border: none;
     font-size: 15px;
     font-weight: 600;
     border-radius: 40px;
     padding: 20px 25px;
     line-height: 1;
     text-transform: uppercase;
-    background: linear-gradient(90deg, #0d57d7 0%,#4d8eff 100%);
+    background: linear-gradient(90deg, #8B0828 0%,#000b67 100%);
     position: relative;
     z-index: 2;
 }
@@ -474,7 +475,7 @@ font-weight: 500;
 .tj-counter-section {
     padding: 90px 0 60px;
     // background: -webkit-gradient(linear, left top, right top, from(#4d8eff), to(var(--tj-color-theme-secondary)));
-    background: linear-gradient(90deg, #0d57d7 0%, #4d8eff 100%);
+    background: linear-gradient(90deg, #8B0828 0%, #000B67 100%);
     position: relative;
     z-index: 2;
 }
@@ -692,7 +693,6 @@ area .subs-title .sub-title {
 }
 
 #blogs {
-    background: #f1f6ff;
     padding-top: 30px;
     padding-bottom: 60px;
 
@@ -708,8 +708,8 @@ area .subs-title .sub-title {
 
 .footer-section {
     background: linear-gradient(90deg,
-            #0d57d7 0%,
-            #4d8eff 100%);
+            #8B0828 0%,
+            #000B67 100%);
     position: relative;
     overflow: hidden;
     z-index: 9;
@@ -799,8 +799,9 @@ area .subs-title .sub-title {
     margin-bottom: 40px;
 }
 
-.courses-link-list li+li {
+.courses-link-list li {
     margin-top: 10px;
+    list-style-type: none;
 }
 
 .courses-link-list li a {
@@ -816,6 +817,8 @@ area .subs-title .sub-title {
 
 .courses-link-list li i {
     margin-right: 5px;
+    list-style-type: none;
+
 }
 
 .footer-top .small-post-title a {
@@ -878,6 +881,7 @@ area .subs-title .sub-title {
 
 .terms-privacy li+li {
     margin-left: 30px;
+    list-style-type: none;
 }
 
 .terms-privacy li a {
@@ -896,4 +900,32 @@ area .subs-title .sub-title {
 
 .terms-privacy li+li a:after {
     display: none;
+}
+.btn-primary{
+ background: linear-gradient(
+    90deg,
+    #8B0828 0%,
+    #000b67 100%);   
+    border: none;
+}
+.follow__us{
+    padding: 0px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+    li{
+        list-style-type: none;
+        
+    }
+}
+.view_all_headings{
+    font-size: 10px;
+    color: #000B67;
+    font-weight: 600;
+    margin-left: 10px;
+    text-decoration: underline;
+}
+.bi-arrow-up-right-square-fill{
+color: #000B67;
 }

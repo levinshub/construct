@@ -1,10 +1,17 @@
 #navbarSupportedContent{
     margin-left: 50px;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 500;
 }
-.nav-item{
+.nav-item {
     margin-right: 20px;
+    color: #000B67;
+    a{
+        color: #000B67;
+    }
+    .active{
+        font-weight: 600
+    }
 }
 .bi-whatsapp{
     color: green;
