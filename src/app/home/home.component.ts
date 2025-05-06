@@ -1,21 +1,19 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from "./header/header.component";
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { NgFor, NgForOf,CommonModule } from "@angular/common";
 import { Router } from '@angular/router';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
-import { FooterComponent } from "./footer/footer.component";
-
+import { HeaderComponent } from '../header/header.component';
 @Component({
-  selector: 'app-root',
+  selector: 'app-home',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, CarouselModule, NgFor, CommonModule, NgbAccordionModule, FooterComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  imports: [RouterOutlet, HeaderComponent,CarouselModule,NgFor,CommonModule,NgbAccordionModule],
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.scss'
 })
-export class AppComponent {
+export class HomeComponent {
   items = ['First', 'Second', 'Third'];
 
   title = 'construct';
