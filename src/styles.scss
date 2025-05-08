@@ -807,20 +807,6 @@ area .subs-title .sub-title {
     z-index: 1;
 }
 
-#blogs {
-    padding-top: 30px;
-    padding-bottom: 60px;
-
-    .card-body {
-        height: 80px;
-    }
-
-    .card-title {
-        font-size: 15px;
-        font-weight: 500;
-    }
-}
-
 
 .site-logo{
     img{
@@ -1052,5 +1038,117 @@ color: #000B67;
 .service-number{
     img{
         width: 50px;
+    }
+}
+#blogs{
+ 
+    padding-top: 30px;
+    padding-bottom: 60px;
+
+    .card{
+        border: none !important;
+    }
+    .card-title {
+        font-size: 13px;
+        font-weight: 600;
+        padding-left: 0px;
+        text-decoration: underline;
+    }
+    .card-body {
+        padding-left: 0px;
+    }
+    .caption {
+        display: -webkit-box !important;
+        overflow: hidden;
+        margin-top: 15px;
+        word-wrap: break-word;
+        font-size: 13px;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        height: 36.4px;
+    }
+    .sub__date{
+        color: rgba(17, 17, 17, 0.7);
+        margin-top: 10px;
+        line-height: 16px;
+        font-size: 12px;
+    }
+    ul{
+        display: flex;
+        gap: 5px;
+        padding-left: 0px;
+        li{
+            list-style-type: none;
+        }
+        svg{
+            color: rgb(235, 201, 47);
+            font-size: 12px;
+        }
+        a{
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+    .review_footer{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+#blogs__main{
+    iframe{
+        height: 200px;
+        border-radius: 10px;
+    }
+    padding-top: 30px;
+    padding-bottom: 60px;
+
+    .card{
+        border: none !important;
+    }
+    .card-title {
+        font-size: 17px;
+        font-weight: 700;
+        padding-left: 0px;
+        text-decoration: underline;
+    }
+    .card-body {
+        padding-left: 0px;
+    }
+    .caption {
+        display: -webkit-box !important;
+        overflow: hidden;
+        margin-top: 15px;
+        word-wrap: break-word;
+        font-size: 15px;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        height: 36.4px;
+    }
+    .sub__date{
+        color: rgba(17, 17, 17, 0.7);
+        margin-top: 10px;
+        line-height: 16px;
+        font-size: 14px;
+    }
+    ul{
+        display: flex;
+        gap: 5px;
+        padding-left: 0px;
+        li{
+            list-style-type: none;
+        }
+        svg{
+            color: rgb(235, 201, 47);
+            font-size: 12px;
+        }
+        a{
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+    }
+    .review_footer{
+        display: flex;
+        justify-content: space-between;
     }
 }
