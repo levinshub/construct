@@ -6,10 +6,11 @@ import { NgFor, NgForOf,CommonModule } from "@angular/common";
 import { Router } from '@angular/router';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from '../header/header.component';
+import { ContactUsComponent } from "../contact-us/contact-us.component";
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent,CarouselModule,NgFor,CommonModule,NgbAccordionModule],
+  imports: [RouterOutlet, HeaderComponent, CarouselModule, NgFor, CommonModule, NgbAccordionModule, ContactUsComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -43,14 +44,14 @@ export class HomeComponent {
     },
   }
   customOptions_projects: OwlOptions = {
-    loop: true,
+    loop: false,
     mouseDrag: true,
     touchDrag: false,
     pullDrag: false,
     dots: true,
     navSpeed: 1000,
-    navText: ['Next', 'Prev'],
-    nav: false,
+    navText: ['<i class="fa fa-chevron-left"></i>', 'Prev'],
+    nav: true,
     lazyLoad:false,
     responsive: {
       0: {
@@ -60,13 +61,14 @@ export class HomeComponent {
         items: 2
       },
       740: {
-        items: 2
+        items: 3
       },
       940: {
-        items: 3
+        items: 4
       }
     },
   }
+  
   productImages = [
     {
       image: "/assets/17.jpg",
@@ -96,42 +98,7 @@ export class HomeComponent {
       actualPrice: "150",
       discountPrice: "130",
       discountPercent: "15%"
-    }, {
-      image: "/assets/1.jpg",
-      id: "5",
-      name: "Ready Idiyappam mix Flour",
-      actualPrice: "180",
-      discountPrice: "150",
-      discountPercent: "10%"
-    }, {
-      image: "/assets/1.jpg",
-      id: "6",
-      name: "Kuzhambu Chili Powder",
-      actualPrice: "235",
-      discountPrice: "225",
-      discountPercent: "3%"
-    }, {
-      image: "/assets/1.jpg",
-      id: "7",
-      name: "Kollu Idli Podi",
-      actualPrice: "267",
-      discountPrice: "247",
-      discountPercent: "8%"
-    }, {
-      image: "/assets/1.jpg",
-      id: "8",
-      name: "Black Pepper Powder",
-      actualPrice: "361",
-      discountPrice: "349",
-      discountPercent: "5%"
-    }, {
-      image: "/assets/1.jpg",
-      id: "9",
-      name: "Readymade Murukku Maavu",
-      actualPrice: "246",
-      discountPrice: "223",
-      discountPercent: "12%"
-    },
+    }
   ]
   customOptions_reviews: OwlOptions = {
     loop: true,
@@ -142,13 +109,13 @@ export class HomeComponent {
     navSpeed: 1000,
     navText: ['Next', 'Prev'],
     nav: false,
-    lazyLoad:false,
+    lazyLoad:true,
     responsive: {
       0: {
         items: 1
       },
       400: {
-        items: 2
+        items: 1
       },
       740: {
         items: 2

@@ -79,7 +79,7 @@
 .tj-counter-section {
     padding: 60px 0 60px;
     // background: -webkit-gradient(linear, left top, right top, from(#4d8eff), to(var(--tj-color-theme-secondary)));
-    background: linear-gradient(90deg, #8B0828 0%, #000B67 100%);
+    background: #C5853A;
     position: relative;
     z-index: 2;
 }
@@ -257,35 +257,15 @@ area .subs-title .sub-title {
     text-transform: uppercase;
 }
 .title{
-    color: #8B0828;
-    font-size: 19px;
+    color: #9E6726;
+    font-size: 17px;
+    font-weight: 300;
 }
 .desc{
-    font-size: 16px;
+    font-size: 15px;
 }
 
-.tj-service-item-two {
-    max-width: 415px;
-    width: 100%;
-    background: #fbfbfb;
-    margin-bottom: 15px;
-    padding: 30px;
-    border-radius: 5px;
-}
 
-.tj-service-item-two .service-infos {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 20px;
-}
 
 .tj-service-item-two .service-infos .service-icon {
     position: relative;
