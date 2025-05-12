@@ -259,14 +259,30 @@ area .subs-title .sub-title {
 .title{
     color: #9E6726;
     font-size: 17px;
-    font-weight: 300;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 .desc{
     font-size: 15px;
 }
+// .you_tube{
+//     border: 1px solid #C5853A;
+//     border-radius: 5px;
+//     padding: 10px 15px;
+//     background: #fffaf4;
+// }
 
-
-
+.about_intro_text{
+    margin-top: 15px;
+    font-size: 40px;
+    font-weight: 600;
+}
+.experience_tag{
+font-size: 18px;
+font-weight: 600;
+color: #C5853A;
+letter-spacing: 1px;
+}
 .tj-service-item-two .service-infos .service-icon {
     position: relative;
     max-width: 54px;
