@@ -1,0 +1,34 @@
+
+.testimonial-one__client-info {
+    position: relative;
+    display: flex
+;
+    justify-content: space-between;
+    align-items: center;
+}
+.testimonial-one__client-details {
+    position: relative;
+    display: flex
+;
+    align-items: center;
+}
+.testimonial-one__client-img {
+    position: relative;
+    display: block;
+    img{
+width: 70px;
+    }
+ 
+}
+.testimonial-one__client-content {
+    margin-left: 15px;
+    h4{
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+.campaign-one__img {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
