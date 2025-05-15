@@ -587,9 +587,8 @@ position: relative;
 }
 
 .tj-counter-section {
-    padding: 90px 0 60px;
-    // background: -webkit-gradient(linear, left top, right top, from(#4d8eff), to(var(--tj-color-theme-secondary)));
-    background: linear-gradient(90deg, #8B0828 0%, #000B67 100%);
+    padding: 60px 0 60px;
+    background: #C5853A;
     position: relative;
     z-index: 2;
 }
@@ -1546,3 +1545,4 @@ color: #C5853A;
     text-align: center; 
     margin-top: 10px; 
 }
+
