@@ -48,29 +48,54 @@ p {
     left: 0;
     background: #9E6726;
 }
+@media only screen and (max-width: 600px) {
 
-@media only screen and (max-width: 913px) {
-          .carousel-control-prev, .carousel-control-next {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 7% !important;
-    padding: 0;
-    color: #fff;
-    text-align: center;
-    background: none;
-    filter: var(--bs-carousel-control-icon-filter);
-    border: 0;
-    opacity: 1;
-    transition: opacity 0.15s ease;
-}
+    .carousel-control-prev,
+    .carousel-control-next {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 2;
+        display: none !important;
+        align-items: center;
+        justify-content: center;
+        width: 7% !important;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+        background: none;
+        filter: var(--bs-carousel-control-icon-filter);
+        border: 0;
+        opacity: 1;
+        transition: opacity 0.15s ease;
+    }
 }
 
-@media only screen and (max-width: 913px) {
+@media only screen and (max-width: 991px) {
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 7% !important;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+        background: none;
+        filter: var(--bs-carousel-control-icon-filter);
+        border: 0;
+        opacity: 1;
+        transition: opacity 0.15s ease;
+    }
+}
+
+
+@media only screen and (max-width: 991px) {
 
     .carousel-caption {
         position: absolute;
@@ -83,11 +108,11 @@ p {
         color: var(--bs-carousel-caption-color);
         text-align: left !important;
 
-  
+
 
         .sub-title {
             display: block;
-            font-size: 26px !important;
+            font-size: 20px !important;
             font-weight: 500;
             color: rgba(255, 255, 255, 1);
             text-transform: uppercase;
@@ -102,7 +127,55 @@ p {
             font-family: "Oswald", sans-serif;
             font-optical-sizing: auto;
             font-size: 14px !important;
-            line-height: 1;
+            line-height: 2 !important;
+            margin-bottom: 20px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .section__sub__title {
+            font-size: 20px;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+}
+
+@media only screen and (max-width: 550px) {
+
+    .carousel-caption {
+        position: absolute;
+        right: 10% !important;
+        bottom: 2.25rem !important;
+        left: 10% !important;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+        z-index: 2;
+        color: var(--bs-carousel-caption-color);
+        text-align: left !important;
+
+
+
+        .sub-title {
+            display: block;
+            font-size: 20px !important;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 1);
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            position: relative;
+            z-index: 1;
+            padding-left: 0px;
+            margin-bottom: 10px;
+        }
+
+        .section__title {
+            font-family: "Oswald", sans-serif;
+            font-optical-sizing: auto;
+            font-size: 14px !important;
+            line-height: 2 !important;
             margin-bottom: 20px;
             font-weight: 400;
             text-transform: uppercase;
@@ -212,7 +285,7 @@ p {
     }
 }
 
-@media only screen and (max-width: 913px) {
+@media only screen and (max-width: 991px) {
 
     .carousel-item {
         img {
@@ -242,20 +315,22 @@ p {
     box-shadow: 0 0 0.2rem 0 rgba(0, 0, 0, 0.12) !important;
     background: #ffffff;
 }
-@media only screen and (max-width: 913px) {
-.navbar {
-    position: fixed;
-    top: 0px;
-    height: 90px;
-    z-index: 30;
-    right: 0px;
-    left: 0px;
-    box-shadow: 0 0 0.2rem 0 rgba(0, 0, 0, 0.12) !important;
-    background: #ffffff;
-    .container{
-          background: #ffffff !important;  
+
+@media only screen and (max-width: 991px) {
+    .navbar {
+        position: fixed;
+        top: 0px;
+        height: 90px;
+        z-index: 30;
+        right: 0px;
+        left: 0px;
+        box-shadow: 0 0 0.2rem 0 rgba(0, 0, 0, 0.12) !important;
+        background: #ffffff;
+
+        .container {
+            background: #ffffff !important;
+        }
     }
-}
 }
 
 .builder__text {
