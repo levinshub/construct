@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:construct": "node dist/construct/server/server.mjs"
+    "serve:ssr:construct": "node dist/construct/server/server.mjs",
+    "build:gh": "ng build --base-href /construct/ && copy dist\\construct\\browser\\index.html dist\\construct\\browser\\404.html"
   },
   "private": true,
   "dependencies": {
