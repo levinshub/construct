@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container">
-    <a class="navbar-brand" href="#"><img src="assets/logo.jpeg"></a>
+    <a class="navbar-brand" routerLink="/home"><img src="assets/logo.jpeg"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -11,7 +11,7 @@
           <a class="nav-link">Our Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Cost Estimator</a>
+          <a class="nav-link">Cost Estimator</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/blogs" routerLinkActive="active" ariaCurrentWhenActive="page">Blogs</a>
@@ -43,3 +43,42 @@
     </div>
   </div>
 </nav>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card px-15">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group mt-10">
+                        <label for="name">Mobile Number *</label>
+                        <input type="text" id="name" placeholder="Mobile Numbe" required>
+                    </div>
+                    <div class="form-group mt-10">
+                        <label for="name">Email</label>
+                        <input type="text" id="name" placeholder="Email" required>
+                    </div>
+                    <div class="form-group mt-10">
+                        <label for="name">Location of your plot</label>
+                        <input type="text" id="name" placeholder="Location of your plot" required>
+                    </div>
+                    <div class="form-group mt-20">
+                        <button class="btn btn-primary w-100" type="submit">Reqest a call back</button>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+        </div>
+    </div>
+</div>
