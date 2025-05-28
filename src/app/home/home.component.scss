@@ -86,6 +86,7 @@
 
 .counter-item {
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .counter-item .counter-content {
@@ -94,6 +95,7 @@
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
+    place-content: center;
     align-items: center;
     margin-bottom: 10px;
 }
@@ -257,10 +259,13 @@ area .subs-title .sub-title {
     text-transform: uppercase;
 }
 .title{
-    color: #9E6726;
-    font-size: 17px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    // color: #9E6726;
+    color: #C5853A;
+    font-size: 18px;
     font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 .desc{
     font-size: 16px;
@@ -279,8 +284,10 @@ area .subs-title .sub-title {
 }
 .name_highlight{
     color: #C5853A; 
-    font-weight: 600;
+    font-weight: 500;
+    letter-spacing: 3px;
     font-size: 30px;
+    font-family: "Oswald", sans-serif;
 }
 .experience_tag{
 font-size: 18px;
