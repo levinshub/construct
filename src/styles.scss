@@ -587,9 +587,8 @@ position: relative;
 }
 
 .tj-counter-section {
-    padding: 90px 0 60px;
-    // background: -webkit-gradient(linear, left top, right top, from(#4d8eff), to(var(--tj-color-theme-secondary)));
-    background: linear-gradient(90deg, #8B0828 0%, #000B67 100%);
+    padding: 60px 0 60px;
+    background: #C5853A;
     position: relative;
     z-index: 2;
 }
@@ -1114,9 +1113,7 @@ color: #9E6726;
     padding-top: 30px;
     padding-bottom: 60px;
 
-    .card{
-        border: none !important;
-    }
+  
     .card-title {
         font-size: 14px;
         font-weight: 700;
@@ -1169,17 +1166,18 @@ color: #C5853A;
 }
 .nav-tabs{
     .nav-link {
-        color: #C5853A;
-        font-weight: 400;
+        color: #333333;
+        font-weight: 600;
+        font-size: 14px;
         background: #ffffff;
-        border: 1px solid #cbcbcb;
+        border: 1.5px solid #cbcbcb;
         border-radius: 35px;
         padding: 6px 18px;
         margin-right: 20px;
     }
     .nav-link.active {
         color: #ffffff;
-        font-weight: 600;
+        font-weight: 700;
         background: #C5853A;
         border: 1px solid;
         border-radius: 35px;
@@ -1534,16 +1532,17 @@ color: #C5853A;
 }
 .section_title{
     font-size: 25px;
-    color: #C5853A ;
-    font-weight: 400;
-    letter-spacing:4px;
+    color: #333333 ;
+    font-weight: 700;
+    letter-spacing:1px;
     text-align: center;
     text-transform: uppercase;
 }
 .section_sub_title{
-    font-size: 25px;
+    font-size: 23px;
     color: #333333 ;
     font-weight: 500;
     text-align: center; 
-    margin-top: 20px; 
+    margin-top: 10px; 
 }
+
