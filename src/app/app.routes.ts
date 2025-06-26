@@ -5,6 +5,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { CostEstimatorComponent } from './cost-estimator/cost-estimator.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -29,6 +30,10 @@ export const routes: Routes = [
         path: 'projects',
         data: { title: 'projects' },  
         component: ProjectsComponent,
+      },{
+        path: 'cost-estimator',
+        data: { title: 'projects' },  
+        component: CostEstimatorComponent,
       },
       
 ];
