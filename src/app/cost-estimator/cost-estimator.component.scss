@@ -1,0 +1,186 @@
+// Theme color variables
+$theme-primary: #C5853A;
+$theme-primary-dark: #C5853A;
+$theme-bg: #f8f9fa;
+$theme-border: #e0e0e0;
+$theme-text: #1a237e;
+$theme-card-bg: #fff;
+
+// Custom styles for select dropdowns
+.form-select.custom-dropdown {
+  background-color: $theme-bg;
+  border: none;
+  border-radius: 30px;
+  padding: 0.1rem 2rem 0.1rem 1rem;
+  font-weight: 500;
+  color: $theme-text;
+//   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s;
+}
+
+.form-select.custom-dropdown:focus {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+label.fw-bold {
+  font-size: 1.1rem;
+  color: $theme-primary;
+}
+
+// Center align Left Type and Right Type dropdowns
+.row.mb-3 {
+  justify-content: center;
+}
+
+// .col-md-6.mb-2,
+// .col-md-6 {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+.cost-tab-questions .nav-link {
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: $theme-text;
+  font-weight: 500;
+  font-size: 1.08rem;
+  border-radius: 0;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.cost-tab-questions .nav-link.active {
+  border-bottom: 3px solid $theme-primary;
+  color: $theme-primary;
+  background: none;
+}
+
+.cost-tab-questions .nav-link:hover {
+  color: $theme-primary-dark;
+}
+
+.border-bottom.p-3 {
+  border-bottom: 1.5px solid $theme-border !important;
+  background: $theme-card-bg;
+}
+
+.accordion {
+  border: none;
+  background: transparent;
+}
+
+.accordion-item {
+  border: none;
+  background: transparent;
+  margin-bottom: .5rem;
+//   box-shadow: 0 1px 16px 0 rgba(0,0,0,0.07), 0 1.5px 4px 0 rgba(0,0,0,0.03);
+  border-radius: 0px;
+  overflow: hidden;
+      border-bottom: 1px solid $theme-border;
+
+}
+
+.accordion-header {
+  border: none;
+  background: transparent;
+}
+
+.accordion-button {
+  border: none;
+  background: $theme-card-bg;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: none;
+  font-weight: 600;
+  font-size: 1.08rem;
+  padding: 1.1rem 1.5rem;
+  transition: background 0.2s;
+}
+
+.accordion-button:not(.collapsed) {
+  background: unset;
+  color: $theme-primary;
+}
+
+.accordion-collapse {
+  border: none;
+  background: $theme-card-bg;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.chevron-icon {
+  font-size: 1.2rem;
+}
+
+// Remove all borders from inner content
+.p-3 {
+  border: none !important;
+}
+
+ul {
+  border: none;
+  background: transparent;
+}
+
+.floating-form {
+  background: $theme-card-bg;
+  border-radius: 1rem;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07), 0 1.5px 4px 0 rgba(0,0,0,0.03);
+  padding: 2rem 1.5rem 1rem 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.form-floating > .form-control {
+  border: none;
+  border-bottom: 1px solid $theme-primary;
+//   background: $theme-bg;
+  color: $theme-text;
+  border-radius: 0;
+//   background: #f8f9fa;
+  box-shadow: none;
+    font-size: 16px;
+    padding-left: 4px;
+}
+
+.form-floating > .form-control:focus {
+  border-bottom: 1px solid $theme-primary-dark;
+  box-shadow: none;
+  outline: none;
+}
+
+.form-floating > label {
+  color: $theme-primary;
+  font-weight: 600;
+  font-size: 16px;
+  padding-left: 0px;
+}
+
+.custom-input {
+  border: none;
+  border-bottom: 1px solid $theme-primary;
+  background: $theme-bg;
+  color: $theme-text;
+  border-radius: 0;
+//   background: #f8f9fa;
+  margin-bottom: 1.5rem;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.custom-input:focus {
+  border-bottom: 1px solid $theme-primary-dark;
+  box-shadow: none;
+  outline: none;
+}
+.esti_cal_btn{
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+}
+
+

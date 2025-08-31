@@ -1,0 +1,118 @@
+<div class="container pt-100 pb-60 ">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1>Free House Construction Cost Calculator
+            </h1>
+            <p>Fill out the form below to get an estimate of house construction costs. Speak to our technical expert for
+                a more accurate pricing
+
+            </p>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-12 col-lg-6 col-md-6">
+            <div class="row mb-4">
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="nameInput" placeholder="Phone">
+                        <label for="nameInput">Phone</label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="nameInput" placeholder="Name">
+                        <label for="nameInput">Name</label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="locationInput" placeholder="Location of plot">
+                        <label for="locationInput">Location of plot</label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="form-floating ">
+                        <input type="number" class="form-control" id="areaInput" #areaInput
+                            placeholder="Builtup area Sq ft">
+                        <label for="areaInput">Builtup area Sq ft</label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6 ">
+                    <div class="form-floating">
+                        <input type="number" class="form-control" id="balconyInput" #balconyInput
+                            placeholder="Balcony and utility area">
+                        <label for="balconyInput">Balcony and utility area</label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-12">
+                    <button type="button" class="btn btn-primary mt-20 esti_cal_btn" (click)="calculateCost()">Estimate
+                        cost for free</button>
+                </div>
+                <div class="col-12 mt-3" *ngIf="estimatedCost !== null">
+                    <div class="alert alert-success">
+                        <strong>Estimated Construction Cost:</strong> ₹{{ estimatedCost | number:'1.0-0' }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-4 justify-content-center">
+        <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+            <label for="citySelect" class="me-2 fw-bold">Currently showing for
+            </label>
+            <select id="citySelect" class="form-select custom-dropdown w-auto" [(ngModel)]="selectedCity">
+                <option *ngFor="let city of cities; let i = index" [value]="i">{{ city.name }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class=" col-md-6  col-6 mb-2 mb-md-0 d-flex align-items-center justify-content-center">
+            <!-- <label for="leftType" class="me-2 fw-bold">Left Type:</label> -->
+            <select id="leftType" class="form-select custom-dropdown w-auto" [(ngModel)]="selectedTypes[0]">
+                <option *ngFor="let type of types; let i = index" [value]="i">{{ type }}</option>
+            </select>
+        </div>
+        <div class=" col-md-6  col-6 d-flex align-items-center justify-content-center">
+            <!-- <label for="rightType" class="me-2 fw-bold">Right Type:</label> -->
+            <select id="rightType" class="form-select custom-dropdown w-auto" [(ngModel)]="selectedTypes[1]">
+                <option *ngFor="let type of types; let i = index" [value]="i">{{ type }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row mt-20">
+        <div class="col-12">
+            <div class="accordion" id="comparisonAccordion">
+                <div class="accordion-item" *ngFor="let question of questions; let i = index">
+                    <h2 class="accordion-header" [id]="'heading' + i">
+                        <button class="accordion-button" [ngClass]="{'collapsed': !openRows[i]}" type="button"
+                            (click)="toggleRow(i)" [attr.aria-expanded]="openRows[i]">
+                            {{ question.question }}
+                        </button>
+                    </h2>
+                    <div [id]="'collapse' + i" class="accordion-collapse collapse" [ngClass]="{'show': openRows[i]}"
+                        [attr.aria-labelledby]="'heading' + i">
+                        <div class="row g-0">
+                            <div class="col-md-6 col-6 p-3 text-start">
+                                <ul>
+                                    <li *ngFor="let item of getSpec(i, 0).materials">{{ item }}</li>
+                                </ul>
+                                <ul>
+                                    <li *ngFor="let item of getSpec(i, 0).structure">{{ item }}</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6  col-6 p-3 text-start">
+                                <ul>
+                                    <li *ngFor="let item of getSpec(i, 1).materials">{{ item }}</li>
+                                </ul>
+                                <ul>
+                                    <li *ngFor="let item of getSpec(i, 1).structure">{{ item }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
